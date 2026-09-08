@@ -123,7 +123,7 @@ public class Color {
         c.establecerAzul(azul);
         return c;
     } 
-    // public String toString(){
-        // return  
-    // }
+    public String toString(){
+        return "Azul" +this.obtenerAzul() +"Rojo" +rojo +"Verde" +verde; 
+    }
 }
