@@ -13,9 +13,10 @@ public class TesterSurtidor {
             System.out.println("Ingresar un numero positivo");
         s.extraerGasoil(a);
         System.out.println();
-        
+        //falta terminarlo
 
 
    }
     
 }
+    
