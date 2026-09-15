@@ -83,7 +83,4 @@ public class SecuenciaEnteros {
             resultado = true;
         return resultado;
     }
-
-
-    
 }
