@@ -19,7 +19,18 @@ public class SecuenciaEnteros {
         
     }
     public void reemplazar(int n){
+        boolean resultado = false;
+        boolean resultado2 = false;
+        for (int i = 0; i < sec.length && !resultado; i++)
+            if (sec[i] == n){
+                resultado = true;
+                sec[i] = 0;
         
+        for (int i = sec.length -1; i > -1 && !resultado2; i--)
+            if (sec[i] == n){
+                resultado2 = true;
+                sec[i] = 0;
+            }
     }
 
 
