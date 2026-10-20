@@ -1,11 +1,11 @@
 package tp4.ejercicio4;
 import tp2.ejercicio5.Sensor;
 
-public class FilaSennsores {
+public class FilaSensores {
     // Instancia
     private Sensor[]fs;
     // Constructor
-    public FilaSennsores(int cant){
+    public FilaSensores(int cant){
         fs = new Sensor [cant];
     }
     // Comandos
@@ -46,18 +46,35 @@ public class FilaSennsores {
         return cant;
     }
     public int cantidadRiesgo(){
-        int cnat = 0;
+        int cant = 0;
         for(int i = 0; i < fs.length; i++)
-
+            if(fs[i].riesgo())
+                cant++;
+        return cant;
     }
     public boolean hayNRiesgo(int n){
-        boolean resultado = false;
-        for(int i = 0; i < fs.length && !resultado; i++){
-            if(fs[i] )
-        }
+        int resultado = 0;
+        for(int i = 0; i < fs.length && resultado < n; i++)
+            if(fs[i].riesgo())
+                resultado++;
+        return resultado >= n;
     }
-    
-
-
-    
+    public boolean dosConsecutivosEmergencia(){
+        boolean resultado = false;
+        for(int i = 0; i < cantFila() - 1 && !resultado; i++)
+            if(fs[i].emergencia() && fs[i + 1].emergencia())
+                resultado = true;
+        return resultado;
+    }
+    public boolean equals(FilaSensores a){ //superficial
+        return fs == a.fs;
+    }
+    public FilaSensores clone(){ //profudnidad
+        FilaSensores nuevo = new FilaSensores(cantFila());
+        for(int i = 0; i < cantFila(); i++)
+            nuevo.establecerSensor(i,fs[i].clone());
+        return nuevo;
+    } 
+     
 }
+

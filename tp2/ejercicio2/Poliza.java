@@ -2,9 +2,9 @@ package tp2.ejercicio2;
 
 public class Poliza {
     //Atributos de instancia
-    private int nroPoliza;
-    private float incendio, robo;
-    private boolean activa = true;
+    protected int nroPoliza;
+    protected float incendio, robo;
+    protected boolean activa = true;
     
     //Constructores
     public Poliza(int np) {
@@ -44,7 +44,7 @@ public class Poliza {
     public float obtenerRobo(){
         return robo;
     }
-    public float CostoPoliza(){
+    public float obtenerCostoPoliza(){
         return incendio + robo;
     }
     public boolean estaActiva(){
