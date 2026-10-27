@@ -37,4 +37,5 @@ public class ConsumoEdificio {
                     if ((consumoXPiso[i].obtenerAgua() == 0 && consumoXPiso[i].obtenerGas() == 0) ||  (consumoXPiso[i].obtenerElectricidad() == 0 && consumoXPiso[i].obtenerAgua() == 0) || (consumoXPiso[i].obtenerElectricidad() == 0 && consumoXPiso[i].obtenerGas() == 0)) 
                         consumoXPiso[i] = null;       
     }
+}
     

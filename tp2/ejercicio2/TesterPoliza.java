@@ -23,7 +23,7 @@ public class TesterPoliza {
         System.out.println(p1.obtenerIncendio());
         p1.activar();
         System.out.println("El numero de la poliza es: " + p1.obtenerNroPoliza());
-        System.out.println("El costo de la poliza es: " + p1.CostoPoliza());
+        System.out.println("El costo de la poliza es: " + p1.obtenerCostoPoliza());
         System.out.println("La poliza esta activa: " + p1.estaActiva());
         teclado.close();
     }

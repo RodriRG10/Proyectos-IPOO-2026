@@ -2,12 +2,12 @@ package tp2.ejercicio4;
 
 public class Refugio {
     // Atributos Clase
-    private static int capacidadAlacena = 20;
-    private static int cantidadCamas = 10;
+    protected static int capacidadAlacena = 20;
+    protected  static int cantidadCamas = 10;
     // Atributos Instancia
-    private int alimentos;
-    private int bebidas;
-    private int camas;
+    protected  int alimentos;
+    protected  int bebidas;
+    protected  int camas;
     // Constructor
     public Refugio(int a, int b, int c){
         if (a + b > capacidadAlacena){
