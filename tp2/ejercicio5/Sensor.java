@@ -2,10 +2,10 @@ package tp2.ejercicio5;
 
 public class Sensor {
     // Clase
-    private static final double max = 0.01;
+    protected  static final double max = 0.01;
     // Instacia
-    private float p1;
-    private float p2;
+    protected  float p1;
+    protected  float p2;
     // Constructor
     public Sensor(float p1, float p2){
         this.p1 = p1;
