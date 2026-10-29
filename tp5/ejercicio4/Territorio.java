@@ -91,6 +91,7 @@ public class Territorio {
                 }
             corte = false;
         }
+        return nuevo;
     }
     public Territorio clone(){
         Territorio nuevo = new Territorio(cantFilas(), cantColumnas());

@@ -2,8 +2,8 @@ package parcialesviejos.parcial1_2025;
 
 public class Punto {
     // Instancia
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
     // Constructor
     public Punto(int coord, int ord){
         x = coord;
@@ -39,10 +39,10 @@ public class Punto {
             resultado = x == p.obtenerX() && y == p.obtenerY();
         return resultado;    
     }
-    public double distancia(Punto p){
-        double resultado = 0;
+    public float distancia(Punto p){
+        float resultado = 0;
         if(p != null){
-            resultado = Math.sqrt((p.obtenerX() - x) * (p.obtenerX() - x) + (p.obtenerY() - y) * (p.obtenerY() - y));
+            resultado = (float) Math.sqrt((p.obtenerX() - x) * (p.obtenerX() - x) + (p.obtenerY() - y) * (p.obtenerY() - y));
         }
         return resultado;
     }

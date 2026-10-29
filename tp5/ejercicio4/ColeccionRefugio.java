@@ -18,9 +18,16 @@ public class ColeccionRefugio {
             cant++;
         }
     }
-    public void eliminarEscasaSupervivencia(){
-
+    public void eliminarEscasaSupervivencia() {
+    for (int i = 0; i < cant; i++) {
+        if (col[i].diasSupervivencia() <= 1) {
+            col[i] = col[cant - 1]; // Pisa con el último
+            col[cant - 1] = null;   // Desvincula el último
+            cant--;                 // Reduce el tamaño
+            i--;                    // Retrocede el índice para reevaluar la posición i
+        }
     }
+}
 
     // Consultas
     public int tamanoColeccion(){
@@ -58,7 +65,7 @@ public class ColeccionRefugio {
                     resultado = false;
         }
         return resultado;
-    }
+    } 
     
 
     
