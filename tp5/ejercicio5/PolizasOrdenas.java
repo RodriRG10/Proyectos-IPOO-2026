@@ -12,23 +12,23 @@ public class PolizasOrdenas {
     }
     // Comandos
     public void insertar(Poliza pol){
-        int pos = insertarPol(pol);
-        arrastrarDesp(pos);
-        polOrd[pos] = pol;
-        n++;
-    }
-    private int insertarPol(Poliza p){
-        int resultado = n;
-        for(int i = 0; i < cantPolizas() && resultado == n; i++){
-            if(p.obtenerNroPoliza() < polOrd[i].obtenerNroPoliza())
-                resultado = i;
+        boolean resultado = false;
+        int pos = n;
+        for(int i = 0; i < n && !resultado; i++){
+            if(polOrd[i].obtenerNroPoliza() > pol.obtenerNroPoliza()){
+                while(pos > i){
+                    polOrd[pos] = polOrd[pos - 1];
+                    pos--;
+                }
+            polOrd[i] = pol;
+            n++;
+            resultado = true;
+            }
         }
-    }
-    private void arrastrarDesp(int p){
-        for(int i = cantPolizas(); i > p; i--){
-            polOrd[i] = polOrd[i-1];
+        if(!resultado){
+            polOrd[n] = pol;
+            n++;
         }
-
     }
 
     public void actualizar(int d, int h, int p){
@@ -79,12 +79,30 @@ public class PolizasOrdenas {
         return polOrd[pos];
     }
     public PolizasOrdenas intercalar(PolizasOrdenas p){
-        PolizasOrdenas nuevo = new PolizasOrdenas(cantPolizas() * p.cantPolizas());
-        Poliza p;
-        for(int i = 0; i < cantPolizas(); i++){
-            polOrd[i].obtenerNroPoliza()
-        }
+        PolizasOrdenas po = new PolizasOrdenas(cantPolizas() + p.cantPolizas());
+        int i = 0;
+        int j = 0;
+        while (i < cantPolizas() && j < p.cantPolizas()){
+            if(polOrd[i].obtenerNroPoliza() <= p.obtenerPoliza(j).obtenerNroPoliza()){
+                po.insertar(polOrd[i]);
+                i++;
+            }
+            else {
+                po.insertar(p.obtenerPoliza(j));
+                j++;
+            }
+            }
+        while (i < cantPolizas()){
+            po.insertar(polOrd[i]);
+            i++;
+            }
+        while (j < p.cantPolizas()){
+            po.insertar(p.obtenerPoliza(j));
+            j++;
+            }
+        return po;
+        }  
     }
     
 
-}
+
