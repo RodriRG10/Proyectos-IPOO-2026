@@ -22,7 +22,7 @@ public class Staff {
         return resultado;
     }
     public void eliminar(int p){
-        for(int i = 0; i < cantRubricas(); i++){
+        for(int i = 0; i < cantRubricag(); i++){
             if(s[i].productividad() < p){
                 s[i] = s[cant - 1];
                 s[cant - 1] = null;

@@ -19,7 +19,7 @@ public class Elipse extends Figura {
     }
     // Consultas
     public float area(){
-        return pi * ejeMayor * ejeMenor;\
+        return pi * ejeMayor * ejeMenor;
     }
     public float perimetro(){
         return 2 * pi * (float) Math.sqrt((ejeMayor * ejeMayor + ejeMenor * ejeMenor) / 2);

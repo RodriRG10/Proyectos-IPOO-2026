@@ -34,7 +34,7 @@ public class Triangulo extends Figura {
         if(!resultado && f != null){
             if(getClass() == f.getClass()){
                 t = (Triangulo)f;
-                if(v1 != null && v2 != null && v3 != null && nuevo.obtenerV1() != null && nuevo.obtener)
+                if(v1 != null && v2 != null && v3 != null && t.obtenerV1() != null && t.obtener)
             }
         }
     }
