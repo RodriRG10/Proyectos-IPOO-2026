@@ -20,9 +20,9 @@ public class PolizasOrdenas {
                     polOrd[pos] = polOrd[pos - 1];
                     pos--;
                 }
-            polOrd[i] = pol;
-            n++;
-            resultado = true;
+                polOrd[i] = pol;
+                n++;
+                resultado = true;
             }
         }
         if(!resultado){
