@@ -19,7 +19,7 @@ public class Historicos {
     public void ordenar(){ // Ordena el arreglo de jugadores por nro de camiseta
         for (int i = 0; i < cant - 1; i++)
             for (int j = 0; j < cant - 1; j++)
-                if (jugadoresHistoricos[j].obtenerNroCamiseta() > jugadoresHistoricos[j +1].obtenerNroCamiseta()){
+                if (jugadoresHistoricos[j].obtenerNroCamiseta() > jugadoresHistoricos[j + 1].obtenerNroCamiseta()){
                     Jugador aux = jugadoresHistoricos[j];
                     jugadoresHistoricos[j] = jugadoresHistoricos[j + 1];
                     jugadoresHistoricos[j + 1] = aux;
