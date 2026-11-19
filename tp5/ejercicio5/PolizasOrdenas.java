@@ -14,7 +14,7 @@ public class PolizasOrdenas {
     public void insertar(Poliza pol){
         boolean resultado = false;
         int pos = n; 
-
+        
         
         for(int i = 0; i < n && !resultado; i++){
             if(polOrd[i].obtenerNroPoliza() > pol.obtenerNroPoliza()){

@@ -6,7 +6,7 @@ import javax.swing.border.*;
 class Dos_Botones_Grilla extends JFrame {
 /*Objetos Gráficos*/
   private MiEtiqueta etiqueta;
-  private JButton  botonPerro, botonGato;
+  private MiBoton  botonPerro, botonGato;
   private JPanel panelControl, panelImagen;
   
   public Dos_Botones_Grilla() {
@@ -27,16 +27,10 @@ private void armaPanelBotones(){
 
   panelControl = new JPanel();
   panelControl.setBackground(Color.GRAY);
-  botonPerro = new JButton("Perro");
-  botonGato = new JButton("Gato"); 
-  botonPerro.setPreferredSize(new Dimension(124, 50));
-  botonPerro.setSize(150, 50);
-  botonPerro.setBorder(BorderFactory.createCompoundBorder(new LineBorder(Color.GREEN, 3, false),null));
+  botonPerro = new MiBoton("Perro");
+  botonGato = new MiBoton("Gato");
   // OyenteBotonP oyentePerro = new OyenteBotonP();
   // botonPerro.addActionListener(oyentePerro);
-  botonGato.setPreferredSize(new Dimension(124, 50));
-  botonGato.setSize(150, 50);
-  botonGato.setBorder(BorderFactory.createCompoundBorder(new LineBorder(Color.GREEN, 3, false),null));
   OyenteBotonG oyenteGato = new OyenteBotonG();
   botonGato.addActionListener(oyenteGato);
   
